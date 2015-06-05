@@ -1,5 +1,56 @@
-<html>
-</head>
+
+<html >
+<head>
+<style>
+body {background-color:CCFF99}
+h1   {color:blue;}
+th   {color:blue;background-color:lightgrey}
+</style>
+
+<center><h1>Search Movies By Movie Name, Director,Plot etc.</h1> *You can search by entering keywords<br><br>
+
+<script type="text/javascript">
+   function submitForm()
+   {
+	var xmlhttp;
+	var checkboxes = document.getElementsByName('genre[]');
+	var vals = "";
+	for (var i=0, n=checkboxes.length;i<n;i++) {
+	if (checkboxes[i].checked) 
+	{
+		vals += ","+checkboxes[i].value;
+	}
+	}
+	
+	if (vals) vals = vals.substring(1);
+
+     var plot_value=document.getElementsByName("plot")[0].value;
+	 var title_value=document.getElementsByName("title")[0].value;
+	 var director_value=document.getElementsByName("director")[0].value;
+	 
+	 if (window.XMLHttpRequest)
+      {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+      }
+      else
+      {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange = function() {
+        if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+        {
+          document.getElementById('text1').innerHTML = xmlhttp.responseText;
+         // eventUpdate(xmlhttp.responseText);
+
+        }
+      }
+      xmlhttp.open("GET","search.php?plot="+plot_value+"&title="+title_value+"&director="+director_value+"&genre="+vals, true);
+      xmlhttp.send();
+  }
+  
+
+  
+  </script>
   </head>
   <body>
 <form  name='movie' method='GET'>
@@ -30,12 +81,19 @@ Search By Director Name:<br>
  <input type="checkbox" name="genre[]" value="Musical"  /> Musical
 
 <br><br>
-<button onclick="" href="#">Search</button></fieldset>
+<button onclick="submitForm();return false;" href="#">Search</button></fieldset>
 </form>
 <fieldset >
 <legend >Search results:</legend>
 <div id="text1">
 </div>
 </fieldset>
+
 	</body>
 	</center>
+
+	
+
+
+  
+  
