@@ -65,7 +65,8 @@ Enter Movie Title:<br>
 Search By Director Name:<br>
 <input type="text" name="director" value="">
 <br>
-<input type="checkbox" name="genre[]" value="Comedy"  /> Comedy 
+<input type="checkbox" name="genre[]" value="Comedy"  /> Comedy
+<input type="checkbox" name="genre[]" value="Action"  /> Action
 <input type="checkbox" name="genre[]" value="Drama"  /> Drama 
 <input type="checkbox" name="genre[]" value="Family"  /> Family 
 <input type="checkbox" name="genre[]" value="Sci-Fi"  /> Sci-Fi 
