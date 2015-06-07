@@ -40,6 +40,7 @@ $p=1;
 }
 else
 {
+
 }
 if ( $director != "")
 {
@@ -108,8 +109,8 @@ $display="<div style='height: 900px;overflow: scroll;width: 1200px;'><table styl
           $year=$row['year'];
           $director=$row['director'];
 		  $genre=$row['genre'];
-		  $display=$display."<tr><td><img src='".$poster."' height=100 width=100></td><td>".$title."</td><td>".$year."</td><td>$director</td><td>$genre</td></tr>";
-  }
+			  $display=$display."<tr><td><img src='".$poster."' height=100 width=100></td><td><font color='white'>".$title."</td><td><font color='white'>".$year."</td><td><font color='white'>$director</td><td><font color='white'>$genre</td></font></tr>";
+	  }
   echo $display;
   
 ?>
