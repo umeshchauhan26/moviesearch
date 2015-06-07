@@ -1,13 +1,13 @@
 
 <html >
 <head>
+<div style='height: 30px;width: 1350px;background-color:E41B17'><center><b><font color='2C3539' size=5>SEARCH MOVIES BY PLOT, DIRECTOR NAME, TITLE</font></b></center></div>
 <style>
-body {background-color:CCFF99}
+body {background-color:2C3539}
 h1   {color:blue;}
-th   {color:blue;background-color:lightgrey}
+th   {color:2C3539;background-color:E41B17;text-align:'center'}
 </style>
-
-<center><h1>Search Movies By Movie Name, Director,Plot etc.</h1> *You can search by entering keywords<br><br>
+<center><h1></h1> *You can search by entering keywords<br><br>
 
 <script type="text/javascript">
    function submitForm()
@@ -53,6 +53,8 @@ th   {color:blue;background-color:lightgrey}
   </script>
   </head>
   <body>
+  
+  <font color='white'>
 <form  name='movie' method='GET'>
 <fieldset>
 <legend>Search Here:</legend>
@@ -62,12 +64,12 @@ Enter Plot:<br>
 Enter Movie Title:<br>
 <input type="text" name="title" value="">
 <br>
-Search By Director Name:<br>
+Enter Movie Title:<br>
 <input type="text" name="director" value="">
 <br>
-<input type="checkbox" name="genre[]" value="Comedy"  /> Comedy
-<input type="checkbox" name="genre[]" value="Action"  /> Action
+<input type="checkbox" name="genre[]" value="Comedy"  /> Comedy 
 <input type="checkbox" name="genre[]" value="Drama"  /> Drama 
+<input type="checkbox" name="genre[]" value="Action"  /> Action 
 <input type="checkbox" name="genre[]" value="Family"  /> Family 
 <input type="checkbox" name="genre[]" value="Sci-Fi"  /> Sci-Fi 
 <input type="checkbox" name="genre[]" value="Adventure"  /> Adventure 
@@ -93,7 +95,12 @@ Search By Director Name:<br>
 	</body>
 	</center>
 
-	
+</font>
+
+
+</body>
+</html>
+
 
 
   
